@@ -41,7 +41,8 @@ VM_SIZE           =   '512mb'
 
 ### 複数の Droplets を扱う場合
 
-```./VM001/.env
+###### ./VM001/.env
+```
 TOKEN             =   'xxxxxxxxxxxxxxxx'
 SSH_KEY_NAME      =   'xxxxxxxxxxxxxxxx'
 SSH_KEY_PATH      =   '~/.ssh/id_rsa'
@@ -53,7 +54,9 @@ VM_REGION         =   'sgp1'
 VM_SIZE           =   '512mb'
 ```
 
-```./VM002/.env
+
+###### ./VM002/.env
+```
 TOKEN             =   'xxxxxxxxxxxxxxxx'
 SSH_KEY_NAME      =   'xxxxxxxxxxxxxxxx'
 SSH_KEY_PATH      =   '~/.ssh/id_rsa'
@@ -65,7 +68,8 @@ VM_REGION         =   'sfo1'
 VM_SIZE           =   '512mb'
 ```
 
-```./VM003/.env
+###### ./VM003/.env
+```
 TOKEN             =   'xxxxxxxxxxxxxxxx'
 SSH_KEY_NAME      =   'xxxxxxxxxxxxxxxx'
 SSH_KEY_PATH      =   '~/.ssh/id_rsa'
