@@ -17,11 +17,20 @@ Vagrant.configure('2') do |config|
     override.vm.box               =   'digital_ocean'
     override.vm.box_url           =   'https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box'
 
-    ## Droplets
-    config.vm.hostname            =   "#{ENV['VM_HOSTNAME']}"
-    provider.image                =   "#{ENV['VM_IMAGE']}"
-    provider.region               =   "#{ENV['VM_REGION']}"
-    provider.size                 =   "#{ENV['VM_SIZE']}"
+  end
+  config.vm.define "#{ENV['VM_HOSTNAME']}" do |server|
 
+    ## VM
+    config.vm.hostname            =   "#{ENV['VM_HOSTNAME']}"
+
+    config.vm.provider :digital_ocean do |provider|
+
+      ## Droplet
+      provider.image              =   "#{ENV['VM_IMAGE']}"
+      provider.region             =   "#{ENV['VM_REGION']}"
+      provider.size               =   "#{ENV['VM_SIZE']}"
+
+    end
   end
 end
+
